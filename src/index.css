@@ -1,0 +1,105 @@
+.Som {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 20px;
+  background-color: #f9f9f9; 
+}
+
+h1 {
+
+  font-weight:lighter; 
+  color:grey;
+  text-align: center; 
+
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+
+
+.searchba {
+  display: flex;
+  align-items: center; 
+}
+
+.searchba input {
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.searchba button {
+  padding: 10px 15px; 
+  border: none; 
+  background-color: black;
+  color: white;
+  border-radius: 90px;
+  cursor: pointer;
+}
+
+.searchba button:hover {
+  background-color: grey;
+}
+
+.sam{
+
+
+  margin-right: 60px;
+}
+.Sal{
+  margin-right: 10%;
+  color: black;
+}
+
+.trending-news {
+  display: flex;
+ 
+}
+
+.trending-news h1 {
+margin-left: 0;
+  font-size: 2rem; 
+}
+
+.trending-news h1:not(.Sal) {
+  color: black; 
+}
+
+.Sal {
+  margin-left: 8%;
+  color:grey; 
+}
+.category {
+  display: flex; 
+  justify-content: space-around; /* Space buttons evenly */
+  padding: 20px; /* Add padding around the container */
+ border: none;
+}
+
+.category button {
+
+  border: none;
+  border-radius: 90px;
+  background-color:black; /* Button background color */
+  color: white;
+  font-size: 1rem; 
+  cursor: pointer; 
+  
+}
+
+.category button:hover {
+  background-color: grey; /* Darker background on hover */
+}
+.head{
+  text-align: center;
+  font-size:33px ;
+  font-weight: 26;
+
+}
