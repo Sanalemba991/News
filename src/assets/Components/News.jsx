@@ -1,20 +1,30 @@
+
 import Card from "./Card";
+import { useState } from "react";
 
 function News() {
+  const [search, setSearch] = useState("india");
+  const [newsData, setNewsData] = useState([]); // Initialize as an empty array
+  const API_KEY = "3e50066ea2654bd582fdfb43cc44855b";
 
-   
+  const getData = async () => {
+    try {
+      const response = await fetch(
+        `https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`
+      );
+      const jsonData = await response.json(); // Await the JSON conversion
+      console.log(jsonData.articles);
+      setNewsData(jsonData.articles); // Fix capitalization
+    } catch (error) {
+      console.error("Error fetching news data:", error);
+    }
+  };
 
-  const API_KEY = "3e50066ea2654bd582fdfb43cc44855b"; 
-  const getData= async ()=>{
-    const response= await fetch(`https://newsapi.org/v2/everything?q=tesla&apiKey=${API_KEY}`);
-    const JSonData=  response.json();
-    console.log(JSonData);
-  }
+  const Input = (e) => {
+    console.log(e.target.value);
+    setSearch(e.target.value);
+  };
 
-
-
-  
-    
   return (
     <div>
       <nav>
@@ -33,13 +43,13 @@ function News() {
             </li>
           </ul>
           <div className="searchba">
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search" onChange={Input} />
             <button onClick={getData}>Search</button>
           </div>
         </div>
       </nav>
       <div>
-        <p className="head">Stay Update</p>
+        <p className="head">Stay Updated</p>
       </div>
       <div className="category">
         <button>Sports</button>
@@ -49,7 +59,7 @@ function News() {
         <button>Fitness</button>
       </div>
       <div>
-        <Card />
+        <Card data={newsData} />
       </div>
     </div>
   );
