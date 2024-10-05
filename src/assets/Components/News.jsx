@@ -1,6 +1,19 @@
 import Card from "./Card";
 
 function News() {
+
+   
+
+  const API_KEY = "3e50066ea2654bd582fdfb43cc44855b"; 
+  const getData= async ()=>{
+    const response= await fetch(`https://newsapi.org/v2/everything?q=tesla&apiKey=${API_KEY}`);
+    const JSonData=  response.json();
+    console.log(JSonData);
+  }
+
+
+
+  
     
   return (
     <div>
@@ -21,7 +34,7 @@ function News() {
           </ul>
           <div className="searchba">
             <input type="text" placeholder="Search" />
-            <button>Search</button>
+            <button onClick={getData}>Search</button>
           </div>
         </div>
       </nav>
