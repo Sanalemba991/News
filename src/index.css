@@ -99,7 +99,70 @@ margin-left: 0;
 }
 .head{
   text-align: center;
-  font-size:33px ;
-  font-weight: 26;
+  font-size: 20px ;
+  font-weight: 5px;
+  color: gray;
+  font-style: italic;
+
+}
+.container {
+  display: flex;                   /* Enables flexbox layout */
+  flex-wrap: wrap;                /* Allows items to wrap to the next line */
+  justify-content: space-around;   /* Distributes space between items */
+  padding: 20px;                  /* Adds padding around the container */
+}
+
+.card {
+  background-color: white;        /* Background color for cards */
+  border: 1px solid #ddd;         /* Light border */
+  border-radius: 8px;             /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 10px;                   /* Space between cards */
+  width: 300px;                   /* Fixed width for cards */
+  overflow: hidden;               /* Ensures content stays within rounded corners */
+}
+
+.card img {
+  width: 100%;                   /* Makes image responsive */
+  height: auto;                  /* Maintains aspect ratio */
+}
+
+.cardContent {
+  padding: 15px;                 /* Padding inside the card */
+}
+
+.cardContent a {
+  font-size: 1.2em;              
+  color: #333;                 
+  text-decoration: none;        
+}
+
+.cardContent a:hover {
+  text-decoration: underline;     
+}
+
+.cardContent p {
+  font-size: 0.9em;             
+  color: #666;                 
+  margin: 10px 0;              
+}
+
+.cardContent button {
+  background-color: black;     
+  color: white;                
+  border: none;                  
+  border-radius: 5px;          
+  padding: 10px 15px;          
+  cursor: pointer;               
+  transition: background-color 0.3s; 
+}
+
+.cardContent button:hover {
+  background-color:grey;   
+}
+.lp{
+  font-size: 1.2rem;
+  text-decoration: none;   
+  color: grey;
 
 }

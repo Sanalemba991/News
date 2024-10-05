@@ -1,6 +1,11 @@
 const Card = ({ data }) => {
   console.log(data);
 
+  const readMe=(url)=>{
+
+    window.open(url)
+
+  }
   return (
     <div className="container">
       {data.map((curItem, index) => (
@@ -9,7 +14,7 @@ const Card = ({ data }) => {
           <div className="cardContent">
             <a href="#">{curItem.title}</a>
             <p>{curItem.description}</p>
-            <button>Read more</button>
+            <button onClick={()=>{readMe(curItem.url)}}>Read more</button>
           </div>
         </div>
       ))}
