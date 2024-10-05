@@ -1,10 +1,10 @@
 
 
-function Card() {
+const Card = ({data}) => {
+  console.log(data);
   return (
-    <div className="cardcontain">
-        
-      
+    <div>
+    
     </div>
   )
 }
